@@ -29,7 +29,7 @@ pipeline {
 
         stage('Copy Artifact') {
             steps {
-                bat 'copy Hello.jar C:\\DevOpsArtifacts\\Demo-Java\\OddorEven.jar /Y'
+                bat 'copy OddorEven.jar C:\\DevOpsArtifacts\\Demo-Java\\OddorEven.jar /Y'
             }
         }
     }
