@@ -3,5 +3,6 @@ public class Main {
 
         OddorEven obj = new OddorEven();
         obj.oddOrEven();
+
     }
 }
