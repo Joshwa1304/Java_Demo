@@ -11,13 +11,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'javac Main.java'
+                bat 'javac *.java'
             }
         }
 
         stage('Package') {
             steps {
-                bat 'jar cfe Main.jar Main Main.class'
+                bat 'jar cfe Main.jar Main *.class'
             }
         }
 
