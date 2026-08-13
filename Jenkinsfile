@@ -11,32 +11,32 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'javac OddorEven.java'
+                bat 'javac Main.java'
             }
         }
 
         stage('Package') {
             steps {
-                bat 'jar cfe OddorEven.jar OddorEven OddorEven.class'
+                bat 'jar cfe Main.jar Main Main.class'
             }
         }
 
         stage('Run') {
             steps {
-                bat 'java -jar OddorEven.jar'
+                bat 'java -jar Main.jar'
             }
         }
 
         stage('Copy Artifact') {
             steps {
-                bat 'copy OddorEven.jar C:\\DevOpsArtifacts\\Demo-Java\\OddorEven.jar /Y'
+                bat 'copy Main.jar C:\\DevOpsArtifacts\\Demo-Java\\Main.jar /Y'
             }
         }
     }
 
     post {
         success {
-            archiveArtifacts artifacts: 'OddorEven.jar', fingerprint: true
+            archiveArtifacts artifacts: 'Main.jar', fingerprint: true
         }
     }
 }

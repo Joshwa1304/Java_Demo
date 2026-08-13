@@ -1,5 +1,6 @@
 public class OddorEven {
-    public static void main(String[] args) {
+    public void oddOrEven() {
+
         int num = 2;
 
         if (num % 2 == 0) {
@@ -9,5 +10,6 @@ public class OddorEven {
         else {
             System.out.println("This is Odd number");
         }
+
     }
 }
